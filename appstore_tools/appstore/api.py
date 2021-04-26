@@ -621,7 +621,7 @@ def create_preview(
         access_token=access_token,
         data={
             "data": {
-                "attributes": {"fileName": file_name, "fileSize": file_size},
+                "attributes": {"fileName": file_name, "fileSize": file_size, "previewFrameTimeCode": "00:00"},
                 "relationships": {
                     "appPreviewSet": {
                         "data": {
@@ -655,6 +655,7 @@ def update_preview(
                 "attributes": {
                     "uploaded": uploaded,
                     "sourceFileChecksum": sourceFileChecksum,
+                    "previewFrameTimeCode": "00:00"
                 },
                 "type": "appPreviews",
             }
